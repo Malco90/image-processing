@@ -17,3 +17,4 @@ plt.show()
 ## Mostrar la imagen en escala de grises con histograma y color
 plt.hist(im.ravel(),256,[0,256], color='r')
 plt.show()
+

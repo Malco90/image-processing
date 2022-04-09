@@ -9,4 +9,3 @@ print(im)
 ## Mostrar la imagen
 plt.imshow(im)
 plt.show()
-
