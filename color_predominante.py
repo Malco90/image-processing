@@ -3,7 +3,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 ## Leer la imagen
-imagen = cv2.imread('img.png')
+imagen = cv2.imread('img3.png')
 
 ## Funcion para mostrar la resolución de la imagen
 def resolucion(imagen):
@@ -21,13 +21,13 @@ def color_predominante(imagen):
     negro = 0
     for i in range(len(imagen)):
         for j in range(len( imagen[i])):
-            if imagen[i][j][0] < 80 and imagen[i][j][1] > 150 and imagen[i][j][2] < 80:
+            if imagen[i][j][0] < 80 and imagen[i][j][1] > 100 and imagen[i][j][2] < 80:
                 verde += 1
-            elif imagen[i][j][0] < 80 and imagen[i][j][1] < 80 and imagen[i][j][2] > 150:
+            elif imagen[i][j][0] < 80 and imagen[i][j][1] < 80 and imagen[i][j][2] > 100:
                 azul += 1
-            elif imagen[i][j][0] > 150 and imagen[i][j][1] < 80 and imagen[i][j][2] < 80:
+            elif imagen[i][j][0] > 100 and imagen[i][j][1] < 80 and imagen[i][j][2] < 80:
                 rojo += 1
-            elif imagen[i][j][0] < 80 and imagen[i][j][1] < 80 and imagen[i][j][2] < 80:
+            elif imagen[i][j][0] < 30 and imagen[i][j][1] < 30 and imagen[i][j][2] < 30:
                 negro += 1
     print(verde, rojo, negro, azul)    
     if verde > azul and verde > rojo and verde > negro:
@@ -41,5 +41,6 @@ def color_predominante(imagen):
     else:
         print('No hay color predominante')
 
+resolucion(imagen)
 color_predominante(imagen)
 mostrar_imagen(imagen)
